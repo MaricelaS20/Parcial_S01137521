@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Lista de Tareas</h1>
+        <input v-model="nuevaTarea" placeholder="Escribe una nueva tarea" @keyup.enter="agregarTarea" />
+        <ul>
+            <li v-for="(tarea, index) in tareas" :key="index">
+                {{ tarea }}
+                <button @click="eliminarTarea(index)">Eliminar</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

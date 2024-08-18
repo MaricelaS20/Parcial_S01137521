@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar y Ocultar Mensaje</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="toggleMensaje">Mostrar/Ocultar Mensaje</button>
+        <p v-if="mostrarMensaje">¡Mensaje oculto!</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

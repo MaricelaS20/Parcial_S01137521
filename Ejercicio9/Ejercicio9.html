@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre Completo</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        .result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>Mostrar Nombre Completo</h1>
+        <input v-model="nombre" type="text" placeholder="Nombre" />
+        <input v-model="apellido" type="text" placeholder="Apellido" />
+        <div class="result">
+            <p>Nombre Completo: {{ nombreCompleto }}</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
